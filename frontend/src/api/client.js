@@ -3,7 +3,7 @@ import axios from "axios";
 // Base URL is "/api" — in development Vite proxies this to the Express
 // backend (see vite.config.js), so we avoid CORS issues.
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: `${import.meta.env.VITE_API_URL}/api`,
 });
 
 // Attach the JWT (if present) to every request.
