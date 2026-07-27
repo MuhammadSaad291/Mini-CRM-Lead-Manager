@@ -6,8 +6,8 @@ export default function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState("demo@naxape.com");
-  const [password, setPassword] = useState("demo1234");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -32,7 +32,7 @@ export default function Login() {
     <div className="flex min-h-full items-center justify-center p-4">
       <div className="w-full max-w-sm rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200">
         <div className="mb-6 text-center">
-          <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-600 text-xl font-bold text-white">
+          <div className="mx-auto mb-3 flex h-12 w-12 py-2 items-center justify-center rounded-xl bg-indigo-600 text-xl font-bold text-white">
             CRM
           </div>
           <h1 className="text-xl font-bold text-slate-900">Welcome back</h1>
@@ -86,9 +86,6 @@ export default function Login() {
           </Link>
         </p>
 
-        <p className="mt-4 rounded-lg bg-slate-50 px-3 py-2 text-center text-xs text-slate-500">
-          Demo login is pre-filled: <b>demo@naxape.com</b> / <b>demo1234</b>
-        </p>
       </div>
     </div>
   );
